@@ -1,0 +1,80 @@
+{
+  "image-only_correct": [
+    {
+      "idx": 8446,
+      "task": "relationships",
+      "mode": "image-only",
+      "correct": true,
+      "q": "[img]\nFind the point that is closest to the camera:\nA. Point A is closest\nB. Point B is closest\nC. Point C is closest\nD. Point D is closest",
+      "gt": "?",
+      "pred": "D",
+      "raw": "D. Point D is closest",
+      "sub": "depth"
+    }
+  ],
+  "image-only_wrong": [
+    {
+      "idx": 3703,
+      "task": "dynamics",
+      "mode": "image-only",
+      "correct": false,
+      "q": "[img]\nTo scrape the scraper, which point is most suitable?\nA. Point A\nB. Point B\nC. Point C\nD. Point D",
+      "gt": "?",
+      "pred": "A",
+      "raw": "To scrape the scraper, the most suitable point is A.",
+      "sub": "manipulation"
+    }
+  ],
+  "image&video_correct": [
+    {
+      "idx": 7345,
+      "task": "property",
+      "mode": "image&video",
+      "correct": true,
+      "q": "[vid]\nWhat would likely happen if a softer object, like a rubber block, was used instead of the stone?\nA. The rubber block would break\nB. The person would be hurt\nC. The rubber would absorb the impact\nD. The nails would break",
+      "gt": "?",
+      "pred": "C",
+      "raw": "C. The rubber would absorb the impact",
+      "sub": "attribute"
+    }
+  ],
+  "image&video_wrong": [
+    {
+      "idx": 175,
+      "task": "dynamics",
+      "mode": "image&video",
+      "correct": false,
+      "q": "[vid]\nWhat phenomenon is observed in the video?\nA. Candle producing a bright light\nB. Candle flame dancing hypnotically\nC. Candle burning with a weak flame\nD. Candle melting into a unique shape",
+      "gt": "?",
+      "pred": "A",
+      "raw": "A. Candle producing a bright light",
+      "sub": "chemistry"
+    }
+  ],
+  "general_correct": [
+    {
+      "idx": 3041,
+      "task": "relationships",
+      "mode": "general",
+      "correct": true,
+      "q": "[img]\nBy going in the direction the arrow points in the picture, which of the following options are you most likely to see?\nA. [img]\nB. [img]\nC. [img]\nD. [img]",
+      "gt": "?",
+      "pred": "D",
+      "raw": "D",
+      "sub": "motion"
+    }
+  ],
+  "general_wrong": [
+    {
+      "idx": 2073,
+      "task": "relationships",
+      "mode": "general",
+      "correct": false,
+      "q": "[img]\nAs you follow the direction of the arrow in the picture, which of the following options are you most likely to observe?\nA. [img]\nB. [img]\nC. [img]\nD. [img]",
+      "gt": "?",
+      "pred": "D",
+      "raw": "D.",
+      "sub": "motion"
+    }
+  ]
+}

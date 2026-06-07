@@ -1,0 +1,22 @@
+{
+  "baseline_scienceqa": {
+    "n": 20,
+    "correct": 17,
+    "acc": 85.0
+  },
+  "baseline_mmmu": {
+    "n": 20,
+    "correct": 12,
+    "acc": 60.0
+  },
+  "r2_redo_scienceqa": {
+    "n": 20,
+    "correct": 16,
+    "acc": 80.0
+  },
+  "r2_redo_mmmu": {
+    "n": 20,
+    "correct": 12,
+    "acc": 60.0
+  }
+}

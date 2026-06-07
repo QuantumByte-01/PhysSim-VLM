@@ -1,0 +1,12 @@
+{
+  "baseline_scienceqa": {
+    "n": 425,
+    "correct": 357,
+    "acc": 84.0
+  },
+  "r2_redo_scienceqa": {
+    "n": 425,
+    "correct": 338,
+    "acc": 79.52941176470588
+  }
+}

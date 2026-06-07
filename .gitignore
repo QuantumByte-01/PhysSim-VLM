@@ -1,0 +1,40 @@
+# Secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Large / local-only (keep in full repo; do not push)
+physbench/
+data/raw/
+data/processed/
+data/generated/
+wandb/
+*.log
+MUJOCO_LOG.TXT
+predictions.json
+test_answer.json
+# Built PDFs (optional: remove this line if you want to version a camera-ready PDF)
+*.pdf
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# LaTeX build artefacts (regenerate locally)
+paper/*.aux
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.blg

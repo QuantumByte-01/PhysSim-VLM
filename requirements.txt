@@ -1,0 +1,16 @@
+# VLM Physics - Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+torch>=2.0.0
+accelerate>=0.26.0
+pillow>=10.0.0
+qwen-vl-utils>=0.0.8
+huggingface_hub>=0.20.0
+tqdm>=4.66.0
+
+# IMPORTANT: Qwen3-VL-30B-A3B-Instruct requires the latest transformers from source:
+# pip install git+https://github.com/huggingface/transformers.git
+#
+# Or install from PyPI (if available):
+# transformers>=4.50.0

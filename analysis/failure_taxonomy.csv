@@ -1,0 +1,10 @@
+mode,Baseline,SFT R1,SFT R2-redo,GRPO R3
+empty_response,89,0,0,0
+refusal,0,0,0,0
+unparseable_predicted,11,14,0,1
+off_by_one_mcq,2685,2244,2315,2268
+wrong_reasoning_with_physics,611,101,57,183
+terse_wrong_letter,149,1014,1048,974
+terse_wrong,1,873,979,766
+other_wrong,2256,891,725,924
+correct,3984,4649,4662,4670
