@@ -2,6 +2,11 @@
 
 **Synthetic Physics as Supervision: Learning Real-World Physical Reasoning in Vision-Language Models**
 
+[Paper (OpenReview)](https://openreview.net/forum?id=ItlBE5738K) ·
+[Dataset](https://huggingface.co/datasets/Swastikr/PhysSim-VLM-Dataset) ·
+[SFT R2 split](https://huggingface.co/datasets/Swastikr/PhysSim-VLM-SFT-R2-Data) ·
+[Model card](docs/model_card.md)
+
 Code, data-generation, and evaluation for our AI4Physics @ ICML 2026 workshop paper.
 We fine-tune [Qwen3-VL-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct)
 on synthetic [MuJoCo](https://mujoco.org/) and [PhiFlow](https://github.com/tum-pbs/PhiFlow)
@@ -12,10 +17,11 @@ benchmark.
 ## Key results
 
 On PhysBench Test (`n = 9,786`), synthetic-only supervised fine-tuning lifts
-Qwen3-VL-30B accuracy from **40.7% to 47.6% (+6.9pp)**, with a **+20.1pp** gain on
-the Scene domain. A follow-up GRPO stage with simulator-verifiable rewards preserves
-the aggregate gain (**+7.0pp** over baseline). The full training pipeline costs under
-**$30** in hosted-API credits and uses no local GPU.
+Qwen3-VL-30B accuracy from **40.7% to 47.6% (+6.9pp)**, with a **+20.0pp** gain on
+the Scene domain. A follow-up GRPO stage with simulator-verifiable rewards keeps
+the aggregate gain (**+7.0pp** over baseline); its +0.08pp change over SFT R2 is not
+statistically significant. Training and evaluation run on the hosted Tinker LoRA
+service, so no local GPU is needed.
 
 | Stage | Overall | Dynamics | Property | Relationships | Scene |
 |-------|:-------:|:--------:|:--------:|:-------------:|:-----:|
@@ -76,7 +82,7 @@ export HF_TOKEN=...
 python scripts/generate_training_data.py --tasks ttc,trajectory,stability
 python scripts/generate_fluid_phiflow.py --tasks all
 
-# 2. Supervised fine-tuning (rank-16 LoRA)
+# 2. Supervised fine-tuning (rank-64 LoRA, the scripts' default)
 python scripts/train_sft_tinker.py
 python scripts/train_sft_r2_tinker.py
 
@@ -95,7 +101,8 @@ python scripts/eval_physbench_tinker.py --split test
                Reasoning in Vision-Language Models},
   author    = {Swastik R and Natesha B V},
   booktitle = {AI4Physics Workshop at ICML},
-  year      = {2026}
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=ItlBE5738K}
 }
 ```
 

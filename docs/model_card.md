@@ -30,7 +30,7 @@ simulator state (no human annotation). It is the model from our AI4Physics @ ICM
 
 The pipeline has three stages:
 
-1. **SFT R1** - rank-16 LoRA on 12,023 MuJoCo rigid-body scenes.
+1. **SFT R1** - rank-64 LoRA on 12,023 MuJoCo rigid-body scenes.
 2. **SFT R2-redo** - resumes from R1 on a corrected PhiFlow fluid corpus plus
    categorical comparison families (2,574 scenes).
 3. **GRPO R3** - rank-64 LoRA with simulator-verifiable rewards.
@@ -40,10 +40,8 @@ The pipeline has three stages:
 | | |
 |---|---|
 | Base model | Qwen/Qwen3-VL-30B-A3B-Instruct (MoE, 30B total / ~3B active) |
-| Method | LoRA SFT then GRPO (rank 16 for SFT, rank 64 for GRPO) |
-| Trainable params | ~0.4-1.7% of backbone |
+| Method | LoRA SFT then GRPO (rank 64 throughout, per the saved run configs) |
 | Training platform | Thinking Machines Tinker (hosted LoRA service, no local GPU) |
-| Total training cost | under $30 in hosted-API credits |
 
 ## Results (PhysBench Test, n = 9,786)
 
